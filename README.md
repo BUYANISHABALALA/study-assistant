@@ -2,7 +2,7 @@
 
 A command-line study assistant that answers questions from your own lecture notes using the Claude API. Paste your notes into a text file, ask questions in the terminal, and get exam-focused answers grounded in your material. It remembers the conversation, so follow-ups like "explain that more simply" work.
 
-![Terminal demo](screenshot.png)
+![Web interface](screenshot.png)
 
 ## Features
 
@@ -12,6 +12,7 @@ A command-line study assistant that answers questions from your own lecture note
 - Clear error messages for problems like a bad API key, no internet, or low credit
 - Plain-text output that reads cleanly in a terminal
 - API key kept out of the code and out of Git (loaded from a `.env` file)
+- Web interface with notes upload (.txt, .md, .pdf), built with Flask
 
 ## Setup
 
@@ -44,8 +45,18 @@ You need Python 3.9 or newer and an Anthropic API key from [console.anthropic.co
 
 ## Usage
 
+### Web version
+
 ```
-python app.py, then open http://127.0.0.1:5000
+python app.py
+```
+
+Open http://127.0.0.1:5000 in your browser, click the + button to upload your notes (.txt, .md or .pdf), and ask questions. Press Ctrl+C in the terminal to stop the server.
+
+### Command-line version
+
+```
+python study_assistant.py
 ```
 
 Type a question and press Enter. Commands:
@@ -69,7 +80,7 @@ The script reads `notes.txt` and includes it in the system prompt, so the model 
 - [x] Conversation memory and error handling
 - [x] Flask web interface with file upload
 - [ ] Quiz generation from notes
-- [ ] Dockerize the app
+- [x] Dockerize the app
 - [ ] CI/CD pipeline with GitHub Actions
 
 ## Tech
