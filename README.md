@@ -45,7 +45,7 @@ You need Python 3.9 or newer and an Anthropic API key from [console.anthropic.co
 ## Usage
 
 ```
-python study_assistant.py
+python app.py, then open http://127.0.0.1:5000
 ```
 
 Type a question and press Enter. Commands:
