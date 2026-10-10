@@ -40,7 +40,9 @@ def ask_question(client: Anthropic, notes: str, question: str) -> str:
         "You are a helpful study assistant for a computer engineering student. "
         "Answer the student's question using the notes provided below as your main source. "
         "If the notes don't cover the question, say so, then answer from general knowledge. "
-        "Keep answers clear and exam-relevant.\n\n"
+        "Keep answers clear and exam-relevant. "
+        "Respond in plain text only: no markdown, no headings, no bold, no tables. "
+        "Use short paragraphs and simple dashes for lists.\n\n"
         f"--- STUDENT'S NOTES ---\n{notes if notes else '(no notes loaded yet)'}\n--- END NOTES ---"
     )
 
