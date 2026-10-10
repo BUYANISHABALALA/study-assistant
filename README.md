@@ -67,7 +67,7 @@ The script reads `notes.txt` and includes it in the system prompt, so the model 
 
 - [x] CLI version with notes-based Q&A
 - [x] Conversation memory and error handling
-- [ ] Flask web interface with file upload
+- [x] Flask web interface with file upload
 - [ ] Quiz generation from notes
 - [ ] Dockerize the app
 - [ ] CI/CD pipeline with GitHub Actions
